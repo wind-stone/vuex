@@ -115,6 +115,7 @@ export const mapActions = normalizeNamespace((namespace, actions) => {
  * @return {Object}
  */
 export const createNamespacedHelpers = (namespace) => ({
+  // 函数柯里化，预置 namespace
   mapState: mapState.bind(null, namespace),
   mapGetters: mapGetters.bind(null, namespace),
   mapMutations: mapMutations.bind(null, namespace),
